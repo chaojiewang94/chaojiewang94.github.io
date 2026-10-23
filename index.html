@@ -1,139 +1,232 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 2.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!doctype html>
+<html lang="en">
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Ph.D. student, Xidian University" />
-	<meta name="keywords" content="Chaojie Wang, Bayesian model, Deep probabilistic model,
-	natural language processing, Xidian University" />
-	<meta name="Chaojie Wang" content="Research" />
-	<link rel="stylesheet" type="text/css" href="Chaojie.css" title="Basic Profile" media="all" />
-	<title>Chaojie Wang</title>
-</head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaojie Wang</title>
+<meta name="description" content="Chaojie Wang — Research Scientist at Skywork AI. Generative models, LLM alignment, RLHF and reasoning. Founder of Chaos Capital and Chaos Tech.">
+<meta name="keywords" content="Chaojie Wang, Large language models, RLHF, Alignment, Generative models, Bayesian model, Xidian University, Skywork AI">
+<style>
+:root{
+  --bg:#fbfbfa; --panel:#ffffff; --text:#1d1f23; --muted:#6b7079; --line:#e8e8e4;
+  --accent:#1f4fd1; --accent-soft:#eef2fd; --tag:#f3f3f0; --hl:#b4501c;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#111316; --panel:#171a1e; --text:#e7e9ec; --muted:#9aa0aa; --line:#262a30;
+    --accent:#7ea2ff; --accent-soft:#1b2440; --tag:#1f2329; --hl:#f0a46c;}
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:var(--bg);color:var(--text);font:15.5px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.layout{max-width:1120px;margin:0 auto;padding:56px 28px;display:grid;grid-template-columns:280px 1fr;gap:64px}
 
-<body>
+/* sidebar */
+aside{position:sticky;top:40px;align-self:start}
+.photo{width:100%;max-width:220px;aspect-ratio:378/464;object-fit:cover;border-radius:14px;display:block;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+aside h1{font-size:26px;letter-spacing:-.3px;margin:22px 0 2px}
+.cn{color:var(--muted);font-size:15px}
+.role{margin:12px 0 18px;font-size:14.5px;color:var(--muted);line-height:1.55}
+.role b{color:var(--text);font-weight:600}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;color:var(--text);background:var(--panel)}
+.links a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.links svg{width:14px;height:14px;fill:currentColor}
+.contact{font-size:13px;color:var(--muted);line-height:1.65}
+.contact .addr{margin-bottom:10px}
+nav.toc{margin-top:26px;border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+nav.toc a{color:var(--muted)}
+nav.toc a:hover,nav.toc a.on{color:var(--text);text-decoration:none}
 
+/* main */
+main section{margin-bottom:56px}
+h2{font-size:13px;text-transform:uppercase;letter-spacing:1.6px;color:var(--muted);font-weight:650;margin-bottom:18px;display:flex;align-items:center;gap:12px}
+h2::after{content:"";flex:1;height:1px;background:var(--line)}
+.about p{margin-bottom:14px}
+.callout{border:1px solid var(--line);background:var(--accent-soft);border-radius:12px;padding:14px 18px;font-size:14.5px}
 
-	<div id="sidebar">
-		<a href="index.html"><img src="image/Chaojie_Wang.jpg"  height="230" alt="Sample logotype" /></a>
-		<h1><a style="text-decoration: none" href="index.html">Chaojie Wang</a></h1>
-		<!-- <p class="slogan">everyone has a story to tell</p> -->
-		
-		<ul>
-			<!--<li><a href="#">Page one</a><br />The front page...</li>-->
-			<li><a href="Paper.html">Publications</a></li>
-			<li><a href="Partner.html">Coopraters</a></li>
-			<li><a href="Project.html">Projects</a></li>
-			<li><a href="https://scholar.google.com/citations?user=nuGPdq0AAAAJ&hl=en">Google Scholar</a></li>
-			<li><a href="CV of Hao Zhang.pdf">CV</a></li>
-			<p>
-			<font size="2">2 Science Park Drive<br>
-			#01-08, Ascent<br>
-			Singapore 118222<br></font>
-			<font size="1">
-			chaojie.wang@kunlun-inc.com<br>
-			wcj1994wcj@gmail.com<br>
-			xd_silly@163.com<br></font>
-		</ul>
-	</div>
-	
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+.ventures{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.venture{display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--line);border-radius:14px;background:var(--panel);color:var(--text);transition:.2s}
+.venture:hover{border-color:var(--accent);transform:translateY(-2px);text-decoration:none}
+.venture svg{width:40px;height:40px;flex:none}
+.venture b{display:block;font-size:15.5px}
+.venture span{font-size:13.5px;color:var(--muted);line-height:1.5;display:block;margin-top:2px}
 
-  ga('create', 'UA-35321140-4', 'auto');
-  ga('send', 'pageview');
+.news{list-style:none}
+.news li{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:14.5px}
+.news li:last-child{border-bottom:none}
+.news time{color:var(--muted);font-variant-numeric:tabular-nums;font-size:13.5px;padding-top:1px}
+.venue{font-weight:650}
+.badge{display:inline-block;font-size:11.5px;font-weight:650;color:var(--hl);border:1px solid currentColor;border-radius:5px;padding:0 6px;margin-left:4px;line-height:1.6;vertical-align:1px}
 
+.legend{font-size:13px;color:var(--muted);margin:-6px 0 18px}
+.pubgroup{margin-bottom:22px}
+.pubgroup h3{font-size:15px;font-weight:650;margin-bottom:8px}
+.pubs{list-style:none}
+.pubs li{padding:10px 0 10px 16px;border-left:2px solid var(--line);margin-bottom:6px;font-size:14.5px;line-height:1.6}
+.pubs li:hover{border-left-color:var(--accent)}
+.pubs .t{font-weight:600;display:block}
+.pubs .a{color:var(--muted);display:block}
+.pubs .a b{color:var(--text)}
+.pubs .v{font-size:13.5px}
+.pubs .v a{margin-left:8px}
+
+.timeline{list-style:none}
+.timeline li{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:12px 0;border-bottom:1px solid var(--line)}
+.timeline li:last-child{border-bottom:none}
+.timeline b{font-weight:600}
+.timeline .when{color:var(--muted);font-size:13.5px;font-variant-numeric:tabular-nums;white-space:nowrap}
+.timeline .what{color:var(--muted);font-size:14px;grid-column:1/-1}
+
+.plain{padding-left:18px;font-size:14.5px}
+.plain li{margin-bottom:6px}
+footer{color:var(--muted);font-size:13px;border-top:1px solid var(--line);padding-top:20px}
+
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr;gap:36px;padding:32px 16px}
+  aside{position:static;text-align:left}
+  .photo{max-width:150px}
+  nav.toc{display:none}
+  .ventures{grid-template-columns:1fr}
+  .news li{grid-template-columns:72px 1fr}
+}
+</style>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create','UA-35321140-4','auto');ga('send','pageview');
 </script>
-	
-	<!--style="font-family: Calibri; color: blue; text-decoration: underline;"-->
+</head>
+<body>
+<div class="layout">
 
-	<div id="content">
-		<!--<h2>What Starts Here Changes The World!</h2>-->
-		<p>
-		<p>
-		<br>
-		
-		<p> I am currently working as a Research Scientist in Skywork AI 2050, which is leaded by Prof <a href="https://yanshuicheng.info/">Shuicheng Yan</a> focuses on accelerating the pace of realization of Artificial General Intelligence (AGI). Before that I obtained my Ph.D dergee from <a href="https://en.xidian.edu.cn">Xidian University</a> in 2021, supervised by Prof <a href="https://web.xidian.edu.cn/bchen/en/index.html">Bo Chen</a> and Prof <a href="https://mingyuanzhou.github.io">Mingyuan Zhou</a>, and worked as Research Fellow in <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a> until 2023, supervised by Prof <a href="https://personal.ntu.edu.sg/boan/">Bo An</a>.
-		
-		<br>
-		<br> My research interests mainly lie in generative models (GMs), large language models (LLMs), and reinforcement learning from human feedback (RLHF) technologies.
+<aside>
+  <img class="photo" src="image/Chaojie_Wang.jpg" alt="Chaojie Wang">
+  <h1>Chaojie Wang</h1>
+  <p class="role"><b>Research Scientist</b>, Skywork AI<br>Alignment &amp; Agents · Singapore</p>
+  <div class="links">
+    <a href="https://scholar.google.com/citations?user=nuGPdq0AAAAJ&hl=en"><svg viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm-6.8 9.2V16c0 2.2 3 4 6.8 4s6.8-1.8 6.8-4v-3.8L12 16l-6.8-3.8z"/></svg>Scholar</a>
+    <a href="https://github.com/chaojiewang94"><svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.2.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .4.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+    <a href="https://www.linkedin.com/in/chaojie-wang-071256194"><svg viewBox="0 0 24 24"><path d="M20.4 2H3.6A1.6 1.6 0 0 0 2 3.6v16.8A1.6 1.6 0 0 0 3.6 22h16.8a1.6 1.6 0 0 0 1.6-1.6V3.6A1.6 1.6 0 0 0 20.4 2zM8 19H5V9.5h3V19zM6.5 8.2a1.7 1.7 0 1 1 0-3.5 1.7 1.7 0 0 1 0 3.5zM19 19h-3v-4.6c0-1.1 0-2.5-1.5-2.5S12.8 13 12.8 14.3V19h-3V9.5h2.8v1.3h.1a3.1 3.1 0 0 1 2.8-1.5c3 0 3.5 2 3.5 4.5V19z"/></svg>LinkedIn</a>
+  </div>
+  <div class="contact">
+    <div class="addr">2 Science Park Drive<br>#01-08, Ascent<br>Singapore 118222</div>
+    chaojie.wang@kunlun-inc.com<br>
+    wcj1994wcj@gmail.com<br>
+    xd_silly@163.com
+  </div>
+  <nav class="toc">
+    <a href="#about">About</a>
+    <a href="#news">News</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#awards">Awards &amp; Services</a>
+  </nav>
+</aside>
 
-		<br> I am looking for Research Intern who is willing to work on LLMs for math reasoning and code generation. Please send me your CV if you have interests.
-		<ul>
-		<li> Founder of <a href="https://chaojiewang94.github.io/chaoscapital-site/"><b>Chaos Capital</b></a>, a capital and investment holding company, and the controlling shareholder of Chaos Tech.</li>
-		<li> Founder of <a href="https://chaojiewang94.github.io/chaostech-site/"><b>Chaos Tech</b></a>, an AI technology company focused on large models and multimodal generation.</li>
-		</ul>
-		
-		
-		
-		<p>	
-		<h3>Research Highlights  </h3>
-		<ul>
-			
-		<p> 
+<main>
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>I am a Research Scientist in Alignment and Agents at <b>Skywork AI</b>, led by Prof <a href="https://yanshuicheng.info/">Shuicheng Yan</a>, working towards accelerating the realization of Artificial General Intelligence (AGI). I received my Ph.D. from <a href="https://en.xidian.edu.cn">Xidian University</a> in 2021, supervised by Prof <a href="https://web.xidian.edu.cn/bchen/en/index.html">Bo Chen</a> and Prof <a href="https://mingyuanzhou.github.io">Mingyuan Zhou</a>, and was a Postdoctoral Research Fellow at <a href="https://www.ntu.edu.sg/">Nanyang Technological University</a> until 2024, supervised by Prof <a href="https://personal.ntu.edu.sg/boan/">Bo An</a>.</p>
+    <p>My research focuses on generative models (diffusion models and large language models), reinforcement learning from human feedback (RLHF), and their applications to AIGC, including multi-step reasoning, retrieval-augmented generation (RAG), and alignment in multimodal generation. I have also worked on Bayesian models, graph neural networks, self-supervised learning and out-of-distribution detection.</p>
+    <p class="callout">I am looking for research interns interested in LLMs for math reasoning and code generation. Please send me your CV if you are interested.</p>
+  </section>
 
-<li> [Jun, 2024] Our paper "Q*: Improving Multi-step Reasoning for LLMs with Deliberative Planning" has been released on <a href="https://arxiv.org/abs/2406.14283"> arxiv</a>.
+  <section id="ventures">
+    <h2>Ventures</h2>
+    <div class="ventures">
+      <a class="venture" href="https://chaojiewang94.github.io/chaoscapital-site/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x=".5" y=".5" width="31" height="31" rx="7" fill="#0b0d12" stroke="#c9a96e" stroke-opacity=".6"/><text x="16" y="22.5" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#c9a96e">C</text></svg>
+        <div><b>Chaos Capital</b><span>Founder · A capital and investment holding company, controlling shareholder of Chaos Tech.</span></div>
+      </a>
+      <a class="venture" href="https://chaojiewang94.github.io/chaostech-site/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c5cff"/><stop offset="1" stop-color="#00d4ff"/></linearGradient></defs><rect width="32" height="32" rx="7" fill="#0a0b14"/><path d="M22 10a8 8 0 1 0 0 12" stroke="url(#vg)" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <div><b>Chaos Tech</b><span>Founder · An AI technology company focused on large models and multimodal generation.</span></div>
+      </a>
+    </div>
+  </section>
 
-			</li>	
-			
-		<p>
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news">
+      <li><time>2025</time><div>"Improving Multi-step Reasoning Abilities of LLMs with Direct Advantage Policy Optimization" accepted to <span class="venue">NeurIPS 2025</span> <span class="badge">Spotlight</span></div></li>
+      <li><time>2025</time><div>"Removing Length Bias in RLHF Is Not Enough" accepted to <span class="venue">ACL 2025</span>.</div></li>
+      <li><time>2024</time><div>"Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning" accepted to <span class="venue">ICLR 2024</span> <span class="badge">Oral</span></div></li>
+      <li><time>2024</time><div>"MacroHFT: Memory Augmented Context-aware Reinforcement Learning on High Frequency Trading" accepted to <span class="venue">KDD 2024</span>.</div></li>
+      <li><time>Jun 2024</time><div>"Q*: Improving Multi-step Reasoning for LLMs with Deliberative Planning" released on <a href="https://arxiv.org/abs/2406.14283">arXiv</a>.</div></li>
+      <li><time>Feb 2024</time><div>Joined <b>Skywork AI</b> as a Research Scientist in Alignment and Agents.</div></li>
+      <li><time>2023</time><div>"Few-shot Generation via Recalling the Episodic-Semantic Memory like Human Being" accepted to <span class="venue">NeurIPS 2023</span>.</div></li>
+      <li><time>2022</time><div>Champion (1st place) of the <b>L2RPN-ICAPS</b> Learning to Run a Power Network Challenge.</div></li>
+      <li><time>2022</time><div>Three papers accepted to <span class="venue">NeurIPS 2022</span>.</div></li>
+    </ul>
+  </section>
 
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <p class="legend">* equal contribution &nbsp;·&nbsp; # corresponding author &nbsp;·&nbsp; Full list on <a href="https://scholar.google.com/citations?user=nuGPdq0AAAAJ&hl=en">Google Scholar</a> · <a href="paper/Chaojie_Wang.bib">BibTeX</a></p>
 
-<li> [May, 2021] Our paper "EnsLM: Ensemble Language Model for Data Diversity by Semantic Clustering" with Zhibin Duan, Chaojie Wang, Zhengjue Wang, Bo Chen,
-	         and Mingyuan Zhou will be published in <a href="https://2021.aclweb.org/">ACL 2021</a>. 
-	         This work is about by semantic clustering, building an ensemble language model to alleviate the heterogeneous charateristics of data unsupervisedly. 
-		 Our idea can be used for language generation (decoder) and understanding (encoder and autoencoder).
-			</li>	
-			
-		<p>
-			
-<li> [May, 2021] Our paper "Multimodal Weibull Variational Autoencoder for Jointly Modeling Image-Text Data" with Chaojie Wang, Bo Chen, Sucheng Xiao, Zhengjue Wang, Penghui Wang, Ning Han, 
-	         and Mingyuan Zhou will be published in <a href="https://ieeexplore.ieee.org/abstract/document/9417864">IEEE Trans. on Cybernetics</a>. 
-	         This work is about building an interpretable image-text modalities probability autoencoder.
-			</li>	
-			
-		<p>
-			
-<li> [September, 2020] Our paper "Deep Relational Topic Modeling via Graph Poisson Gamma Belief Network" with Chaojie Wang, Zhengjue Wang, Dongsheng Wang, Bo Chen, and Mingyuan Zhou
-			will be published in <a href="https://nips.cc/Conferences/2020">NeurIPS2020</a>. This work is about using hierarical topic model to explore the graph data for node clustering, node classification and 
-			node-relation prediction.
-			</li>
-			
-		<p>	
-			
-<li> [September, 2020] Our paper "Bidirectional Convolutional Poisson Gamma Dynamical Systems" with Wenchao Chen, Chaojie Wang, Yicheng Liu, Bo Chen, and Mingyuan Zhou
-			will be published in <a href="https://nips.cc/Conferences/2020">NeurIPS2020</a>. This work is about building a bidirectional convolutional topic modeling for 
-			document classifcation and exploring the relations among sentences in one document.
-			</li>	
-			
+    <div class="pubgroup"><h3>Alignment &amp; Agents</h3><ul class="pubs">
+      <li><span class="t">Improving Multi-step Reasoning Abilities of Large Language Models with Direct Advantage Policy Optimization</span><span class="a">Jiacai Liu, <b>Chaojie Wang#</b>, Yang Liu</span><span class="v">NeurIPS 2025 <span class="badge">Spotlight</span></span></li>
+      <li><span class="t">Q*: Improving Multi-step Reasoning for LLMs with Deliberative Planning</span><span class="a"><b>Chaojie Wang*</b>, Yancheng Deng*#, Zhiyi Lv, Shuicheng Yan, Bo An</span><span class="v">TPAMI (under review), 2025<a href="https://arxiv.org/abs/2406.14283">arXiv</a></span></li>
+      <li><span class="t">Removing Length Bias in RLHF Is Not Enough</span><span class="a"><b>Chaojie Wang</b>, Haonan Shi, Long Tian#, Bo An, Shuicheng Yan</span><span class="v">ACL 2025</span></li>
+      <li><span class="t">MacroHFT: Memory Augmented Context-aware Reinforcement Learning on High Frequency Trading</span><span class="a">Chuqiao Zong, <b>Chaojie Wang#</b>, Molei Qin, Lei Feng, Xinrun Wang, Bo An</span><span class="v">KDD 2024</span></li>
+    </ul></div>
 
-		
-		<p> 
-			
-<li> [September, 2020] Our paper "Friendly Topic Assistant for Transformer Based Abstractive Summarization" with Zhengjue Wang, Zhibin Duan, Chaojie Wang, Long Tian, Bo Chen, and Mingyuan Zhou
-			will be published in the 2020 Conference on Empirical Methods in Natural Language Processing (<a href="https://2020.emnlp.org/">EMNLP2020</a>). This work is about using topic model to help Transformer based language model for 
-			document abstractive summarization.
-			</li>
+    <div class="pubgroup"><h3>Generative Model Theory</h3><ul class="pubs">
+      <li><span class="t">Candidate Label Set Pruning: A Data-centric Perspective for Deep Partial-label Learning</span><span class="a">Shuo He, <b>Chaojie Wang</b>, Guowu Yang, Lei Feng</span><span class="v">ICLR 2024 <span class="badge">Oral</span></span></li>
+      <li><span class="t">Few-shot Generation via Recalling the Episodic-Semantic Memory like Human Being</span><span class="a">Zhibin Duan*, Zhiyi Lv*, <b>Chaojie Wang#</b>, Bo Chen, Bo An, Mingyuan Zhou</span><span class="v">NeurIPS 2023</span></li>
+      <li><span class="t">Out-of-Distribution Detection with An Adaptive Likelihood Ratio on Informative Hierarchical VAE</span><span class="a">Yewen Li*, <b>Chaojie Wang*#</b>, Xiaobo Xia, Tongliang Liu, Xin Miao, Bo An</span><span class="v">NeurIPS 2022</span></li>
+      <li><span class="t">Alleviating "Posterior Collapse" in Deep Topic Models via Policy Gradient</span><span class="a">Yewen Li*, <b>Chaojie Wang*#</b>, Zhibin Duan, Dongsheng Wang, Bo Chen, Bo An, Mingyuan Zhou</span><span class="v">NeurIPS 2022</span></li>
+    </ul></div>
 
-		<p> 
-			
-<li> [Janurary, 2020] Our paper "Learning Dynamic Hierarchical Topic Graph with Graph Convolutional Network for Document Classication" with Zhengjue Wang, Hao Zhang, Zhibin Duan, Bo Chen, and Mingyuan Zhou
-			will be presented in <a href="https://www.aistats.org">AISTATS2020</a>. This work is about building a dynamic document graph 
-			with the help of a hierarhcical topic model for document classification. Hope to see you in Palermo, Sicily, Italy, in June 2020.
-			</li>	
-			
-			
-		<p>	
-		<h3>Honors and Awards  </h3>
-		<ul>
-			
-		<p> 
-			
-	<li> [2016] The ACM-ICPC China Shaanxi Provincial Programming Contest. <a style=" color: blue;" href="image/Chaojie_Wang_ICPC.pdf">individual</a> / <a style=" color: blue;" href="image/Chaojie_Wang_ICPC_team.pdf">team</a>  </li>			
-		<p class="credits">&copy; Chaojie Wang<br />
-		</ul>
-	</div>
+    <div class="pubgroup"><h3>Natural Language Processing</h3><ul class="pubs">
+      <li><span class="t">Generative Text Convolutional Neural Network for Hierarchical Document Representation Learning</span><span class="a"><b>Chaojie Wang</b>, Bo Chen, Zhibin Duan, Wenchao Chen, Hao Zhang, Mingyuan Zhou</span><span class="v">IEEE TPAMI, 2022</span></li>
+      <li><span class="t">Learning Hierarchical Document Graphs From Multilevel Sentence Relations</span><span class="a">Hao Zhang*, <b>Chaojie Wang*</b>, Zhengjue Wang, Zhibin Duan, Bo Chen, Mingyuan Zhou, Ricardo Henao, Lawrence Carin</span><span class="v">IEEE TNNLS, 2022</span></li>
+      <li><span class="t">Bidirectional Convolutional Poisson Gamma Dynamical Systems</span><span class="a">Wenchao Chen*, <b>Chaojie Wang*</b>, Bo Chen, Yicheng Liu, Hao Zhang, Mingyuan Zhou</span><span class="v">NeurIPS 2020<a href="https://papers.nips.cc/paper/2020/hash/26178fc759d2b89c45dd31962f81dc61-Abstract.html">Paper</a></span></li>
+      <li><span class="t">Convolutional Poisson Gamma Belief Network</span><span class="a"><b>Chaojie Wang</b>, Bo Chen, Sucheng Xiao, Mingyuan Zhou</span><span class="v">ICML 2019<a href="paper/cPGBN_ICML_2019.pdf">PDF</a><a href="https://arxiv.org/abs/1905.05394">arXiv</a><a href="https://github.com/BoChenGroup/CPGBN">Code</a></span></li>
+    </ul></div>
+
+    <div class="pubgroup"><h3>Graph Neural Networks</h3><ul class="pubs">
+      <li><span class="t">A Variational Edge Partition Model for Supervised Graph Representation Learning</span><span class="a">Yilin He*, <b>Chaojie Wang*#</b>, Hao Zhang, Bo Chen, Mingyuan Zhou#</span><span class="v">NeurIPS 2022</span></li>
+      <li><span class="t">Deep Relational Topic Modeling via Graph Poisson Gamma Belief Network</span><span class="a"><b>Chaojie Wang*</b>, Hao Zhang*, Bo Chen, Dongsheng Wang, Zhengjue Wang, Mingyuan Zhou</span><span class="v">NeurIPS 2020<a href="https://proceedings.neurips.cc/paper/2020/hash/05ee45de8d877c3949760a94fa691533-Abstract.html">Paper</a></span></li>
+      <li><span class="t">Learning Dynamic Hierarchical Topic Graph with Graph Convolutional Network for Document Classification</span><span class="a">Zhengjue Wang*, <b>Chaojie Wang*</b>, Hao Zhang, Zhibin Duan, Bo Chen, Mingyuan Zhou</span><span class="v">AISTATS 2020</span></li>
+    </ul></div>
+
+    <div class="pubgroup"><h3>Multi-Modality</h3><ul class="pubs">
+      <li><span class="t">Multimodal Weibull Variational Autoencoder for Jointly Modeling Image-Text Data</span><span class="a"><b>Chaojie Wang</b>, Bo Chen, Sucheng Xiao, Zhengjue Wang, Hao Zhang, Penghui Wang, Ning Han, Mingyuan Zhou</span><span class="v">IEEE TCYB, 2021<a href="https://ieeexplore.ieee.org/abstract/document/9417864">IEEE</a></span></li>
+      <li><span class="t">Multimodal Poisson Gamma Belief Network</span><span class="a"><b>Chaojie Wang</b>, Bo Chen, Mingyuan Zhou</span><span class="v">AAAI 2018<a href="paper/mPGBN_AAAI_2018.pdf">PDF</a><a href="https://github.com/BoChenGroup/Multimodal_PGBN">Code</a></span></li>
+    </ul></div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li><b>Skywork AI</b><span class="when">Feb 2024 – Present</span><span class="what">Research Scientist, Alignment and Agents · Singapore</span></li>
+      <li><b>Nanyang Technological University</b><span class="when">Nov 2021 – Feb 2024</span><span class="what">Postdoctoral Research Fellow, School of Computer Science and Engineering · Singapore</span></li>
+      <li><b>Xidian University</b><span class="when">2016 – 2021</span><span class="what">Ph.D. in Signal and Information Processing · Xi'an, China</span></li>
+      <li><b>Xidian University</b><span class="when">2012 – 2016</span><span class="what">B.E. in Electronic Engineering and Information Science · Xi'an, China</span></li>
+    </ul>
+  </section>
+
+  <section id="awards">
+    <h2>Awards &amp; Services</h2>
+    <ul class="plain">
+      <li><b>Champion</b> (1st place), L2RPN-ICAPS Learning to Run a Power Network Challenge, 2021–2022</li>
+      <li><b>Bronze Medal</b>, ACM-ICPC China Shaanxi Provincial Programming Contest, 2016 (<a href="image/Chaojie_Wang_ICPC.pdf">individual</a> / <a href="image/Chaojie_Wang_ICPC_team.pdf">team</a>)</li>
+      <li>Reviewer for AAAI 2021, ICLR 2021–2025, ICML 2021–2025, NeurIPS 2022–2025, IEEE TPAMI, IEEE TSP, IEEE TNNLS</li>
+    </ul>
+  </section>
+
+  <footer>© Chaojie Wang · More: <a href="Paper.html">Earlier publications</a> · <a href="Partner.html">Collaborators</a> · <a href="Project.html">Projects</a></footer>
+</main>
+</div>
+<script>
+const links=[...document.querySelectorAll('nav.toc a')];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+document.querySelectorAll('main section').forEach(s=>io.observe(s));
+</script>
 </body>
 </html>
